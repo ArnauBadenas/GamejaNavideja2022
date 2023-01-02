@@ -5,39 +5,13 @@ using UnityEngine.InputSystem;
 
 public class playerInteraction : MonoBehaviour
 {
-    /*Script related to player interaction ONLY*/
-    private static playerInteraction instance;
-    private bool interactPressed = false;
-
-    private void Awake()
-    {
-        //Detect inputmanager
-        if (instance != null)
-        {
-            Debug.LogError("Found more than one Input Manager in the scene.");
-        }
-        instance = this;
-    }
-
-    public static playerInteraction GetInstance(){
-        return instance;
-    }
-
-    public void InteractButtonPressed(InputAction.CallbackContext context){
-        if (context.performed)
-        {
-            interactPressed = true;
-        }
-        else if (context.canceled)
-        {
-            interactPressed = false;
+    private void Update(){
+        if(action.IsPressed()){
+            float interactRange = 2f;
+            Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
+            foreach(Collider collider in colliderArray){
+                Debug.Log(collider);
+            }
         }
     }
-
-    public bool GetInteractPressed() {
-        bool result = interactPressed;
-        interactPressed = false;
-        return result;
-    }
-
 }
