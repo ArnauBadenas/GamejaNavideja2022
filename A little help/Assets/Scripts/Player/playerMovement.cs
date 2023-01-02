@@ -28,7 +28,7 @@ public class playerMovement : MonoBehaviour
         setPlayerVelocity();
         rotateInDirectionOfInput();
     }
-
+    //Movement
     private void setPlayerVelocity()
     {
         _smoothedMovementInput = Vector2.SmoothDamp(
@@ -54,4 +54,5 @@ public class playerMovement : MonoBehaviour
         //Get movement input from current vectors x and y
         _movementInput = inputValue.Get<Vector2>();
     }
+
 }
