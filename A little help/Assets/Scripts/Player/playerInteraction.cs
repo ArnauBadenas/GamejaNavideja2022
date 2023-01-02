@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class playerInteraction : MonoBehaviour
 {
     private void Update(){
-        if(action.IsPressed()){
+        if(action.Interact.IsPressed()){
             float interactRange = 2f;
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
             foreach(Collider collider in colliderArray){
