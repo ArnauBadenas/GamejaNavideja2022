@@ -21,7 +21,7 @@ public class dialogueTrigger : MonoBehaviour
         if(playerInRange){
             visualCue.SetActive(true);
             if(playerInteraction.GetInstance().GetInteractPressed()){
-
+                Debug.Log(inkJSON.text);
             }
         }
         else{
