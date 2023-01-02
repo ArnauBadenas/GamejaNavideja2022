@@ -3,56 +3,37 @@ using UnityEngine.InputSystem;
 
 public class playerMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float _speed;
+    public Animator animator;
+    float inputHorizontal;
+    float inputVertical;
 
     [SerializeField]
-    private float _rotationSpeed;
+    public float moveSpeed = 5f;
 
-    private Rigidbody2D _rigidbody;
-    private Vector2 _movementInput;
-    private Vector2 _smoothedMovementInput;
-    private Vector2 _movementInputSmoothVelocity;
+    private Rigidbody2D rb;
+    
+    Vector2 movement;
 
     //On game start
     private void Awake(){
         //Set variables
-        _rigidbody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
     }
 
-    //Every Frame
+    
+    void Update(){
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
+    }
+
     private void FixedUpdate()
     {
-        //Define smooth movement parameters
-        //This function will make the speed increment increase smoothly.
-        setPlayerVelocity();
-        rotateInDirectionOfInput();
-    }
-    //Movement
-    private void setPlayerVelocity()
-    {
-        _smoothedMovementInput = Vector2.SmoothDamp(
-                    _smoothedMovementInput,
-                    _movementInput,
-                    ref _movementInputSmoothVelocity,
-                    0.1f //Transition time
-                );
-
-        _rigidbody.velocity = _smoothedMovementInput * _speed;
-    }
-
-    private void rotateInDirectionOfInput(){
-        if(_movementInput != Vector2.zero){
-            Quaternion targetRotation = Quaternion.LookRotation(transform.forward, _smoothedMovementInput);
-            Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
-
-            _rigidbody.MoveRotation(rotation);
-        }
-    }
-
-    private void OnMove(InputValue inputValue){
-        //Get movement input from current vectors x and y
-        _movementInput = inputValue.Get<Vector2>();
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
 }
