@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Player;
 using UnityEngine;
 
 namespace Interaction
@@ -11,13 +12,14 @@ namespace Interaction
         {
             return m_NearbyInteractables.Count != 0;
         }
-
+        
         private void Update()
         {
-            if (HasNearbyInteractables() && Input.GetButtonDown("Submit"))
+            if (HasNearbyInteractables())
             {
                 //Ideally, we'd want to find the best possible interaction (ex: by distance & orientation).
                 m_NearbyInteractables[0].DoInteraction();
+                Debug.Log("Estoy aqui");
             }
         }
 

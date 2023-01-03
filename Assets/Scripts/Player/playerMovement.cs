@@ -1,4 +1,6 @@
-using System.IO.Pipes;
+using System.Collections;
+using System.Collections.Generic;
+using InkySaveUsPls;
 using Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -13,7 +15,7 @@ public class playerMovement : MonoBehaviour
     public float moveSpeed = 5f;
 
     private Rigidbody2D rb;
-    
+
     Vector2 movement;
 
     //On game start
@@ -27,25 +29,11 @@ public class playerMovement : MonoBehaviour
     {
         movement.x = InputHandler.instance.input.movement.x;
         movement.y = InputHandler.instance.input.movement.y;
-        if (InputHandler.instance.input.interact)
-        {
-            if (!InputHandler.instance.input.interactHasBeenUsed)
-            {
-                Interact();
-            }
-
-            InputHandler.instance.input.interactHasBeenUsed = true;
-        }
+        
         //Variables se hacen dentro de unity
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-    }
-
-    //This happens when button is pressed
-    private void Interact()
-    {
-        Debug.Log("interacted");
     }
 
     private void FixedUpdate()
