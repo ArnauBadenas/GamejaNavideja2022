@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class dialogueTrigger : MonoBehaviour
 {
+    /*
     [Header("Visual Cue")]
     [SerializeField] private GameObject visualCue;
 
@@ -16,7 +17,7 @@ public class dialogueTrigger : MonoBehaviour
         playerInRange = false;
         visualCue.SetActive(false);
     }
-
+    
     private void Update(){
         if(playerInRange){
             visualCue.SetActive(true);
@@ -38,5 +39,5 @@ public class dialogueTrigger : MonoBehaviour
         if(collider.gameObject.tag == "Player"){
             playerInRange = false;
         }
-    }
+    }*/
 }
