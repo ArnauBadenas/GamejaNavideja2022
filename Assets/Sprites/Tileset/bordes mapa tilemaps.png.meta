@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 62e2195961bc58940acd38885c4f7379
+guid: 625bcded3ea53a94394b0d20869e0421
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mueblicos_clase_tileset_0
+      name: bordes mapa tilemaps_0
       rect:
         serializedVersion: 2
-        x: 68
-        y: 696
-        width: 306
-        height: 183
+        x: 315
+        y: 649
+        width: 118
+        height: 118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1008e483f50f87247982a06b04a63241
-      internalID: 2147314393
+      spriteID: c9f80945e9114ef489e9875be46911e0
+      internalID: 1209554020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mueblicos_clase_tileset_1
+      name: bordes mapa tilemaps_1
       rect:
         serializedVersion: 2
-        x: 516
-        y: 689
-        width: 329
-        height: 204
+        x: 451
+        y: 649
+        width: 114
+        height: 117
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e15f380181fd6c34fb132839a04d2fa5
-      internalID: 602932975
+      spriteID: 961650c3eb207414f86b0c808688f8bc
+      internalID: -1871043448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mueblicos_clase_tileset_2
+      name: bordes mapa tilemaps_2
       rect:
         serializedVersion: 2
-        x: 180
-        y: 345
-        width: 139
-        height: 322
+        x: 576
+        y: 646
+        width: 121
+        height: 121
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 786871dbd74818d419806c31f22c718b
-      internalID: 1887101916
+      spriteID: 2ed6ad7c5b421b84690af397b8305126
+      internalID: 1258933402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mueblicos_clase_tileset_3
+      name: bordes mapa tilemaps_3
       rect:
         serializedVersion: 2
-        x: 408
-        y: 395
+        x: 315
+        y: 514
         width: 117
-        height: 199
+        height: 113
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81f5a4f626071534494a136b6a55f284
-      internalID: -722689560
+      spriteID: c60b19c700e04db4fb90a3bb0aa31e2e
+      internalID: -1949880713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mueblicos_clase_tileset_4
+      name: bordes mapa tilemaps_4
       rect:
         serializedVersion: 2
-        x: 710
-        y: 392
-        width: 132
-        height: 204
+        x: 577
+        y: 514
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e68d23757168e746bf0bb664b9fb095
-      internalID: -150094078
+      spriteID: f777c4ffd0a687849b243f3f259c48c1
+      internalID: -219033087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mueblicos_clase_tileset_5
+      name: bordes mapa tilemaps_5
       rect:
         serializedVersion: 2
-        x: 149
-        y: 54
-        width: 703
-        height: 290
+        x: 315
+        y: 382
+        width: 117
+        height: 118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,8 +224,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee6ae571952bc0e4ea2c5da801d4c0bc
-      internalID: 1375821785
+      spriteID: f54b4517bf1fa1e479d1bb592805bfad
+      internalID: -1542347887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bordes mapa tilemaps_6
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 382
+        width: 112
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7810a919b3d812e4ea1f082e87954d41
+      internalID: -580504690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bordes mapa tilemaps_7
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 382
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da01be1da3ea61e468ec9172da58438f
+      internalID: 568314800
       vertices: []
       indices: 
       edges: []
@@ -241,12 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mueblicos_clase_tileset_5: 1375821785
-      mueblicos_clase_tileset_2: 1887101916
-      mueblicos_clase_tileset_0: 2147314393
-      mueblicos_clase_tileset_4: -150094078
-      mueblicos_clase_tileset_3: -722689560
-      mueblicos_clase_tileset_1: 602932975
+      bordes mapa tilemaps_3: -1949880713
+      bordes mapa tilemaps_0: 1209554020
+      bordes mapa tilemaps_5: -1542347887
+      bordes mapa tilemaps_7: 568314800
+      bordes mapa tilemaps_6: -580504690
+      bordes mapa tilemaps_4: -219033087
+      bordes mapa tilemaps_2: 1258933402
+      bordes mapa tilemaps_1: -1871043448
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -110,8 +110,8 @@ TextureImporter:
         serializedVersion: 2
         x: 215
         y: 661
-        width: 119
-        height: 102
+        width: 102
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
         serializedVersion: 2
         x: 479
         y: 654
-        width: 125
-        height: 113
+        width: 102
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +152,8 @@ TextureImporter:
         serializedVersion: 2
         x: 215
         y: 510
-        width: 118
-        height: 116
+        width: 102
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: suelo_pared_tileset 1_3
       rect:
         serializedVersion: 2
-        x: 476
-        y: 510
-        width: 122
-        height: 116
+        x: 486
+        y: 517
+        width: 102
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,10 +192,10 @@ TextureImporter:
       name: suelo_pared_tileset 1_4
       rect:
         serializedVersion: 2
-        x: 738
-        y: 510
-        width: 125
-        height: 115
+        x: 743
+        y: 513
+        width: 102
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
