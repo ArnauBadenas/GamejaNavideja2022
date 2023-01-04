@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cb12079b2ccd7c642a09850944709ddb
+guid: a555b8e5b007d44418be78c37ce7693e
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Gaegu
+  - Caveat
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

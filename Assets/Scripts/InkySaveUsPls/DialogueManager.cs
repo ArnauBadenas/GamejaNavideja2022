@@ -11,15 +11,22 @@ namespace InkySaveUsPls
 {
     public class DialogueManager : MonoBehaviour
     {
+        [Header("Params")] [SerializeField]
+        private float typingSpeed = 0.04f;
+        
         [Header("Dialogue UI")] [SerializeField]
         private GameObject dialoguePanel;
-
         [SerializeField] private TextMeshProUGUI dialogueText;
-        [Header("Dialogue UI")] [SerializeField]
+        [SerializeField] private TextMeshProUGUI displayNameText;
+        [SerializeField] private Animator portraitAnimator;
+        private Animator layoutAnimator;
+        
+        [Header("Choices UI")] [SerializeField]
         private GameObject[] choices;
         private TextMeshProUGUI[] choicesText;
         
         private Story currentStory;
+        private Coroutine displayLineCoroutine;
         public bool dialogueIsPlaying { get; private set; }
         public static DialogueManager instance;
 
@@ -41,6 +48,8 @@ namespace InkySaveUsPls
         {
             dialogueIsPlaying = false;
             dialoguePanel.SetActive(false);
+
+            layoutAnimator = dialoguePanel.GetComponent<Animator>();
             
             // get all of the choices text 
             choicesText = new TextMeshProUGUI[choices.Length];
@@ -59,6 +68,9 @@ namespace InkySaveUsPls
                 currentStory = new Story(inkJSON.text);
                 dialogueIsPlaying = true;
                 dialoguePanel.SetActive(true);
+                displayNameText.text = "???";
+                portraitAnimator.Play("default");
+                layoutAnimator.Play("right");
             }
 
             if (currentStory.currentChoices.Count == 0)
@@ -80,13 +92,27 @@ namespace InkySaveUsPls
         {
             if (currentStory.canContinue)
             {
-                dialogueText.text = currentStory.Continue();
-                DisplayChoices();
+                if (displayLineCoroutine != null)
+                {
+                    StopCoroutine(displayLineCoroutine);
+                }
+                displayLineCoroutine = StartCoroutine(DisplayingLine(currentStory.Continue()));
                 HandleTags(currentStory.currentTags);
+                DisplayChoices();
             }
             else
             {
                 StartCoroutine(ExitDialogueMode());
+            }
+        }
+
+        private IEnumerator DisplayingLine(string line)
+        {
+            dialogueText.text = "";
+            foreach (char letter in line.ToCharArray())
+            {
+                dialogueText.text += letter;
+                yield return new WaitForSeconds(typingSpeed);
             }
         }
 
@@ -102,6 +128,23 @@ namespace InkySaveUsPls
                 }
 
                 string tagKey = splitTag[0].Trim();
+                string tagValue = splitTag[1].Trim();
+
+                switch (tagKey)
+                {
+                    case SPEAKER_TAG:
+                        displayNameText.text = tagValue;
+                        break;
+                    case PORTRAIT_TAG:
+                        portraitAnimator.Play(tagValue);
+                        break;
+                    case LAYOUT_TAG:
+                        layoutAnimator.Play(tagValue);
+                        break;
+                    default:
+                        Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
+                        break;
+                }
             }
         }
 
