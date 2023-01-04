@@ -1,0 +1,1 @@
+"Me cago en los Vector2 de mierda." #speaker:Aitor #portrait:sombra #layout:left
