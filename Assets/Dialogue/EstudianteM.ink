@@ -14,7 +14,7 @@ Hmmm... #speaker:Dra. Juan #portrait:dra_juan #layout:right
         ->tercero
 === tercero ====
 Se rie amargadamente. #speaker:Alumno #portrait:sombra #layout:left
-El examen de recuperación es diez mil veces más difícil que el final.
+"El examen de recuperación es diez mil veces más difícil que el final."
 "¿Qué profesor tienes?" #speaker:Dra. Juan #portrait:dra_juan #layout:right
 "La que tiene su nombre." #speaker:Alumno #portrait:sombra #layout:left
 Le doy palmaditas en la espalda. #speaker:Dra. Juan #portrait:dra_juan #layout:right
