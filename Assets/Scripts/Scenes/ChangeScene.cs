@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 namespace Scenes
 {
-   public class ChangeArnauToTest : MonoBehaviour
+   public class ChangeScene : MonoBehaviour
    {
       [SerializeField] private string nombreEscena;
       bool _playerInRange;
