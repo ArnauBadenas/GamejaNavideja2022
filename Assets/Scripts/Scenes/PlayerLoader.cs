@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using Player;
 using Unity.VisualScripting;
 using UnityEngine;
 namespace Scenes
