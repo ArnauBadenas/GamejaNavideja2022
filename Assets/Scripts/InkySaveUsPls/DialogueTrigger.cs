@@ -15,17 +15,7 @@ namespace InkySaveUsPls
         private TextAsset inkJSON;
         
         private bool playerInRange;
-
-        public bool isPlayerInRange()
-        {
-            return playerInRange;
-        }
-
-        private string getInfo()
-        {
-            return inkJSON.text;
-        }
-
+        
         private void Awake()
         {
             playerInRange = false;
@@ -77,7 +67,7 @@ namespace InkySaveUsPls
         IEnumerator wait()
         {
             InputHandler.instance.input.interactHasBeenUsed = true;
-            yield return new WaitForSeconds(.2f);
+            yield return new WaitForEndOfFrame();
         }
     }
 }
