@@ -9,7 +9,7 @@ public class MenuInicial : MonoBehaviour
     public void Play()
     {
         Debug.Log("jugar");
-        SceneManager.LoadScene("GuanGuan");
+        SceneManager.LoadScene("Despacho");
     }
 
     // Update is called once per frame
