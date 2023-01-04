@@ -5,41 +5,41 @@ using UnityEngine.SceneManagement;
 namespace Scenes
 {
    public class ChangeArnauToTest : MonoBehaviour
-   { 
-      bool playerInRange;
+   {
+      [SerializeField] private string nombreEscena;
+      bool _playerInRange;
       [Header("Visual Cue")] [SerializeField]
       private GameObject visualCue;
       private void Awake()
       {
-         playerInRange = false;
+         _playerInRange = false;
          visualCue.SetActive(false);
       }
-      private void OnTriggerEnter2D(Collider2D collider)
+      private void OnTriggerEnter2D(Collider2D col)
       {
-         if (collider.gameObject.tag == "Player")
+         if (col.gameObject.CompareTag("Player"))
          {
-            playerInRange = true;
+            _playerInRange = true;
          }
       }
 
       private void OnTriggerExit2D(Collider2D other)
       {
-         if (other.gameObject.tag == "Player")
+         if (other.gameObject.CompareTag("Player"))
          {
-            playerInRange = false;
+            _playerInRange = false;
          }
       }
       private void Update()
       {
-         if (playerInRange)
+         if (_playerInRange)
          {
             visualCue.SetActive(true);
             if (InputHandler.instance.input.interact)
             {
-               Debug.Log("Interact");
                if (!InputHandler.instance.input.interactHasBeenUsed)
                {
-                  SceneManager.LoadScene("Test");
+                  SceneManager.LoadScene(nombreEscena);
                }
             }
          }
