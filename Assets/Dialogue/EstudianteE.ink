@@ -1,0 +1,1 @@
+Esta recogiendo sus cosas de la taquilla. #speaker:Alumno #portrait:sombra #layout:left
