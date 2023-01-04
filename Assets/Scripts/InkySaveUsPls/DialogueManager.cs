@@ -96,6 +96,12 @@ namespace InkySaveUsPls
             foreach (string tag in currentTags)
             {
                 string[] splitTag = tag.Split(':');
+                if (splitTag.Length != 2)
+                {
+                    Debug.LogError("Tag could not be appropiately parsed: " + tag);
+                }
+
+                string tagKey = splitTag[0].Trim();
             }
         }
 
