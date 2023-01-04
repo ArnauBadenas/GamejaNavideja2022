@@ -5,12 +5,47 @@ using UnityEngine.SceneManagement;
 namespace Scenes
 {
    public class ChangeArnauToTest : MonoBehaviour
-   {
-      private void OnTriggerEnter2D(Collider2D col)
+   { 
+      bool playerInRange;
+      [Header("Visual Cue")] [SerializeField]
+      private GameObject visualCue;
+      private void Awake()
       {
-         if (col.CompareTag("Player") && InputHandler.instance.input.interactHasBeenUsed)
+         playerInRange = false;
+         visualCue.SetActive(false);
+      }
+      private void OnTriggerEnter2D(Collider2D collider)
+      {
+         if (collider.gameObject.tag == "Player")
          {
-            SceneManager.LoadScene("Test");
+            playerInRange = true;
+         }
+      }
+
+      private void OnTriggerExit2D(Collider2D other)
+      {
+         if (other.gameObject.tag == "Player")
+         {
+            playerInRange = false;
+         }
+      }
+      private void Update()
+      {
+         if (playerInRange)
+         {
+            visualCue.SetActive(true);
+            if (InputHandler.instance.input.interact)
+            {
+               Debug.Log("Interact");
+               if (!InputHandler.instance.input.interactHasBeenUsed)
+               {
+                  SceneManager.LoadScene("Test");
+               }
+            }
+         }
+         else
+         {
+            visualCue.SetActive(false);
          }
       }
    }
