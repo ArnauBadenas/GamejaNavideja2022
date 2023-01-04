@@ -12909,6 +12909,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1453502619392079120, guid: fbf25c1d3938bbd499e6e5fd1596396a, type: 3}
+      propertyPath: nombreEscena
+      value: Despacho
+      objectReference: {fileID: 0}
+    - target: {fileID: 1453502619392079120, guid: fbf25c1d3938bbd499e6e5fd1596396a, type: 3}
       propertyPath: startingPositions.Array.data[0]
       value: 
       objectReference: {fileID: 469598078}

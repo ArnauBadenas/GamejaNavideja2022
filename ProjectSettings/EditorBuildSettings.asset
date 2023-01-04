@@ -24,7 +24,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Test.unity
     guid: a6bb2a60c224cb741b1b630872ce2b77
   - enabled: 1
-    path: Assets/Scenes/Clase1.unity
+    path: Assets/Scenes/Game/Clase1.unity
     guid: bd5b29a83cb413146862ecd36c94e92d
+  - enabled: 1
+    path: Assets/Scenes/Game/Clase2.unity
+    guid: e501e27ee8a1afb458d5ec0709986795
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a45a50a028bb3a6489ec9a3493509372, type: 2}

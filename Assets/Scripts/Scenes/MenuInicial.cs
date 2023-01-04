@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,5 +18,10 @@ public class MenuInicial : MonoBehaviour
     {
         Debug.Log("cerrar juego");
         Application.Quit();
+    }
+
+    private void Awake()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }
