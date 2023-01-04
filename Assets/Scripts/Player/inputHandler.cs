@@ -44,6 +44,16 @@ namespace Player
                 input.interact = false;
                 input.interactHasBeenUsed = false;
             };
+            inputActions.Player.Exit.started += _ =>
+            {
+                input.exit = true;
+                input.exitHasBeenUsed = false;
+            };
+            inputActions.Player.Exit.canceled += _ =>
+            {
+                input.exit = false;
+                input.exitHasBeenUsed = false;
+            };
         }
     }
 
@@ -54,5 +64,7 @@ namespace Player
         public Vector2 movement;
         public bool interact;
         public bool interactHasBeenUsed;
+        public bool exit;
+        public bool exitHasBeenUsed;
     }
 }
