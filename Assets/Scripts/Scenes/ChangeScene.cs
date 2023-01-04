@@ -1,3 +1,4 @@
+using System.Collections;
 using Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,19 +9,20 @@ namespace Scenes
    {
       [SerializeField] private string nombreEscena;
       bool _playerInRange;
-      private string escenaActual;
-      private GameObject player;
+      private string _escenaActual;
+      private GameObject _player;
       private void Awake()
       {
-         escenaActual = SceneManager.GetActiveScene().name;
+         _escenaActual = SceneManager.GetActiveScene().name;
          _playerInRange = false;
-         player = GameObject.FindGameObjectWithTag("Player");
+         _player = GameObject.FindGameObjectWithTag("Player");
       }
       private void SaveCurrentCoords(string sceneName)
       {
-         PlayerPrefs.SetFloat(sceneName + "X", player.transform.position.x);
-         PlayerPrefs.SetFloat(sceneName + "Y", player.transform.position.y);
-         PlayerPrefs.SetFloat(sceneName + "Z", player.transform.position.z);
+         var position = _player.transform.position;
+         PlayerPrefs.SetFloat(sceneName + "X", position.x);
+         PlayerPrefs.SetFloat(sceneName + "Y", position.y);
+         PlayerPrefs.SetFloat(sceneName + "Z", position.z);
       }
       private void OnTriggerEnter2D(Collider2D col)
       {
@@ -37,22 +39,16 @@ namespace Scenes
             _playerInRange = false;
          }
       }
+      
       private void FixedUpdate()
       {
-         if (_playerInRange)
-         {
-            if (InputHandler.instance.input.interact)
-            {
-               if (!InputHandler.instance.input.interactHasBeenUsed)
-               {
-                  SaveCurrentCoords(escenaActual);
-                  //Load scene
-                  SceneManager.LoadScene(nombreEscena);
-                  //Transport player into door position
-                  
-               }
-            }
-         }
+         if (!_playerInRange) return;
+         if (!InputHandler.instance.input.interact) return;
+         if (InputHandler.instance.input.interactHasBeenUsed) return;
+         SaveCurrentCoords(_escenaActual);
+         InputHandler.instance.input.interactHasBeenUsed = true;
+         //Load scene
+         SceneManager.LoadScene(nombreEscena);
       }
    }
 }
