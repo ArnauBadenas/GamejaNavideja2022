@@ -1582,8 +1582,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee5c43fd771ef243ac7c9b6f096b09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typingSpeed: 0.04
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
+  displayNameText: {fileID: 0}
+  portraitAnimator: {fileID: 0}
   choices:
   - {fileID: 0}
   - {fileID: 0}
@@ -6668,6 +6671,10 @@ PrefabInstance:
     - target: {fileID: 7879759653818118830, guid: ce780f73e180b8f40abf720c2ff047c3, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 7879759653818118832, guid: ce780f73e180b8f40abf720c2ff047c3, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce780f73e180b8f40abf720c2ff047c3, type: 3}
