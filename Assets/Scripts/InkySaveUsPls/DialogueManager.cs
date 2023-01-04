@@ -23,6 +23,10 @@ namespace InkySaveUsPls
         public bool dialogueIsPlaying { get; private set; }
         public static DialogueManager instance;
 
+        private const string SPEAKER_TAG = "speaker";
+        private const string PORTRAIT_TAG = "portrait";
+        private const string LAYOUT_TAG = "layout";
+
         private void Awake()
         {
             if (instance != null)
@@ -78,10 +82,20 @@ namespace InkySaveUsPls
             {
                 dialogueText.text = currentStory.Continue();
                 DisplayChoices();
+                HandleTags(currentStory.currentTags);
             }
             else
             {
                 StartCoroutine(ExitDialogueMode());
+            }
+        }
+
+        private void HandleTags(List<string> currentTags)
+        {
+            // Loopp through each tag and handle it accordingly
+            foreach (string tag in currentTags)
+            {
+                string[] splitTag = tag.Split(':');
             }
         }
 
