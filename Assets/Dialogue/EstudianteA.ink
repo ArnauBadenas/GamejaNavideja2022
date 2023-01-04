@@ -1,0 +1,1 @@
+"Me han puesto un 6 en los últimos ejercicios de fisica. ¡Te dije que quería al menos un 9!" #speaker:Bully #portrait:sombra #layout:left

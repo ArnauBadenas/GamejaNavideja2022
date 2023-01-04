@@ -69,7 +69,7 @@ namespace InkySaveUsPls
                 dialogueIsPlaying = true;
                 dialoguePanel.SetActive(true);
                 displayNameText.text = "???";
-                portraitAnimator.Play("default");
+                portraitAnimator.Play("sombra");
                 layoutAnimator.Play("right");
             }
 

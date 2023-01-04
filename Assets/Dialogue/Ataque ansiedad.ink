@@ -21,7 +21,7 @@ Diana está teniendo un ataque de ansiedad. Si no me acuerdo mal, hoy tenía un 
         -> segundo
 
 === segundo ===
-Debería distraerlo y hacer que no piense en el examen ni en el ataque de ansiedad… #speaker:Dra. Juan #portrait:dra_juan #layout:right
+Debería distraerla y hacer que no piense en el examen ni en el ataque de ansiedad… #speaker:Dra. Juan #portrait:dra_juan #layout:right
     * [“Very well. We are going to do the five, four, three, two, one exercise. Do you understand?”]
         -- Su respiración no mejora y suelta un sollozo. #speaker:Diana #portrait:diana #layout:left
         -> tercero

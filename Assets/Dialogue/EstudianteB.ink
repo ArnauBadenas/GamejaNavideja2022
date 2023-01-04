@@ -1,0 +1,1 @@
+"Tus apuntes de Historia son del tema 5. ¡Tenemos un examen mañana y el examen es del tema 6!" #speaker:Bully #portrait:sombra #layout:left
