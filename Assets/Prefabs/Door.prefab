@@ -103,7 +103,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1887101916, guid: 62e2195961bc58940acd38885c4f7379, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 4320198424502585112}
   - component: {fileID: 4320198424502585118}
   m_Layer: 0
-  m_Name: ArnauDoor
+  m_Name: DoorTrigger
   m_TagString: TalkToMe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
