@@ -1,0 +1,1 @@
+Está intentando canastar una bola de papel en la papelera. #speaker:Alumno #portrait:sombra #layout:left

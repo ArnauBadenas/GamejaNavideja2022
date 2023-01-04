@@ -34,12 +34,15 @@ namespace InkySaveUsPls
         {
             if (playerInRange)
             {
+                Debug.Log("Rotar");
                 if (freeze)
                 {
+                    rbPlayer.isKinematic = true;
                     rbPlayer.constraints = RigidbodyConstraints2D.None;
                 }
                 else
                 {
+                    rbPlayer.isKinematic = false;
                     rbPlayer.constraints = RigidbodyConstraints2D.FreezeRotation;
                 }
             }
