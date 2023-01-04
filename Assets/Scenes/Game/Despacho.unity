@@ -236,8 +236,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee5c43fd771ef243ac7c9b6f096b09e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typingSpeed: 0.04
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
+  displayNameText: {fileID: 0}
+  portraitAnimator: {fileID: 0}
   choices:
   - {fileID: 0}
   - {fileID: 0}
@@ -969,7 +972,7 @@ GameObject:
   - component: {fileID: 391331020}
   - component: {fileID: 391331019}
   - component: {fileID: 391331021}
-  - component: {fileID: 391331022}
+  - component: {fileID: 391331023}
   m_Layer: 0
   m_Name: Collider_puerta
   m_TagString: Untagged
@@ -1057,7 +1060,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.62032926}
+  m_Offset: {x: 0, y: -0.08562374}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1068,9 +1071,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.39, y: 1.9793413}
+  m_Size: {x: 1.39, y: 3.3912473}
   m_EdgeRadius: 0
---- !u!114 &391331022
+--- !u!114 &391331023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1079,9 +1082,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 391331018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14db1da4305d8ac40858abc60804275f, type: 3}
+  m_Script: {fileID: 11500000, guid: 84b06af7d720a5b41aa4010ff7bbb1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nombreEscena: Pasillo
 --- !u!1 &548357577
 GameObject:
   m_ObjectHideFlags: 0

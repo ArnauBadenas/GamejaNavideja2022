@@ -8,12 +8,9 @@ namespace Scenes
    {
       [SerializeField] private string nombreEscena;
       bool _playerInRange;
-      [Header("Visual Cue")] [SerializeField]
-      private GameObject visualCue;
       private void Awake()
       {
          _playerInRange = false;
-         visualCue.SetActive(false);
       }
       private void OnTriggerEnter2D(Collider2D col)
       {
@@ -34,7 +31,6 @@ namespace Scenes
       {
          if (_playerInRange)
          {
-            visualCue.SetActive(true);
             if (InputHandler.instance.input.interact)
             {
                if (!InputHandler.instance.input.interactHasBeenUsed)
@@ -42,10 +38,6 @@ namespace Scenes
                   SceneManager.LoadScene(nombreEscena);
                }
             }
-         }
-         else
-         {
-            visualCue.SetActive(false);
          }
       }
    }
