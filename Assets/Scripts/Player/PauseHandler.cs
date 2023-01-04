@@ -1,11 +1,15 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Player
 {
     public class PauseHandler : MonoBehaviour
     {
+        [Header("Canvas UI")]
         [SerializeField] private GameObject canvas;
+        [Header("Button UI")]
+        [SerializeField] private GameObject button;
         private bool isActive;
 
         private void Awake()
@@ -33,12 +37,20 @@ namespace Player
             {
                 canvas.SetActive(true);
                 isActive = true;
+                StartCoroutine(SelectFirstChoice());
             }
             else
             {
                 canvas.SetActive(false);
                 isActive = false;
             }
+        }
+        
+        private IEnumerator SelectFirstChoice()
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            yield return new WaitForEndOfFrame();
+            EventSystem.current.SetSelectedGameObject(button.gameObject);
         }
 
         public void Exit()
