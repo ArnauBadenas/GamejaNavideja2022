@@ -15,4 +15,4 @@ Well, do you have any more questions? #speaker:Dr. Green #portrait:dr_green_neut
     -> main
 + [No]
     Goodbye then!
-    -> END
+-> END
