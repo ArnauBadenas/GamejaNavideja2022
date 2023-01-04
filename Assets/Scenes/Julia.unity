@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 562314518}
   - component: {fileID: 562314517}
   m_Layer: 0
-  m_Name: Denis
+  m_Name: Harvey
   m_TagString: TalkToMe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
