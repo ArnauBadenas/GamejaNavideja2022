@@ -492,27 +492,27 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - m_RefCount: 1
-    m_Data: {r: 0.90213686, g: 0.574632, b: 0.6457129, a: 1}
+    m_Data: {r: 0.70864177, g: 0.42415544, b: 0.5180762, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8132308, g: 0.5432605, b: 0.5702842, a: 1}
+    m_Data: {r: 0.75494415, g: 0.34364069, b: 0.4468331, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.773936, g: 0.4341545, b: 0.47998148, a: 1}
+    m_Data: {r: 0.841409, g: 0.4920182, b: 0.56506205, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.7481293, g: 0.42045736, b: 0.44335678, a: 1}
+    m_Data: {r: 0.8950178, g: 0.56060624, b: 0.63229555, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.91813743, g: 0.5053162, b: 0.5817997, a: 1}
+    m_Data: {r: 0.8204301, g: 0.35503945, b: 0.38169017, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8280423, g: 0.41815445, b: 0.514055, a: 1}
+    m_Data: {r: 0.96817714, g: 0.5916906, b: 0.62630296, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.7400026, g: 0.37647316, b: 0.40853092, a: 1}
+    m_Data: {r: 0.869655, g: 0.4338024, b: 0.47776422, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.9283701, g: 0.6438246, b: 0.6876388, a: 1}
+    m_Data: {r: 0.8551793, g: 0.5052033, b: 0.56482995, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.7106682, g: 0.33588776, b: 0.37980482, a: 1}
+    m_Data: {r: 0.9884571, g: 0.4094128, b: 0.49799186, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.82055414, g: 0.33739096, b: 0.39819, a: 1}
+    m_Data: {r: 0.803418, g: 0.53008217, b: 0.5929273, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.9787862, g: 0.60809755, b: 0.62022984, a: 1}
+    m_Data: {r: 0.86148804, g: 0.44772336, b: 0.5781788, a: 1}
   - m_RefCount: 20
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
@@ -559,7 +559,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
