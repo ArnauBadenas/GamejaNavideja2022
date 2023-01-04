@@ -4,7 +4,7 @@ Me pregunto qué le pasa. #speaker:Dra. Juan #portrait:dra_juan #layout:right
     --"¿Eh? Bueno... He suspendido el examen de programación." #speaker:Alumno #portrait:sombra #layout:left
     ->segundo
 * [Ignorarle.]
-    ->END
+    ->acabar
 
 === segundo ====
 Hmmm... #speaker:Dra. Juan #portrait:dra_juan #layout:right
@@ -18,4 +18,8 @@ Se rie amargadamente. #speaker:Alumno #portrait:sombra #layout:left
 "¿Qué profesor tienes?" #speaker:Dra. Juan #portrait:dra_juan #layout:right
 "La que tiene su nombre." #speaker:Alumno #portrait:sombra #layout:left
 Le doy palmaditas en la espalda. #speaker:Dra. Juan #portrait:dra_juan #layout:right
+->acabar
+
+=== acabar ===
+Pobrecillo.
 ->END
