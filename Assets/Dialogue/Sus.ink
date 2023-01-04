@@ -1,1 +1,1 @@
-"Me estoy mareando." #speaker:??? #portrait:sombra #layout:left
+"Me estoy mareando." #speaker:Alumno #portrait:sombra #layout:left
