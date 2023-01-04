@@ -1,3 +1,4 @@
+using Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,9 +8,9 @@ namespace Scenes
    {
       private void OnTriggerEnter2D(Collider2D col)
       {
-         if (col.CompareTag("Player"))
+         if (col.CompareTag("Player") && InputHandler.instance.input.interactHasBeenUsed)
          {
-            SceneManager.LoadScene("Scenes/Game/Despacho");
+            SceneManager.LoadScene("Test");
          }
       }
    }
