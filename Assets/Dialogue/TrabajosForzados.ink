@@ -1,8 +1,6 @@
 VAR final=0
-"Me han puesto un 6 en los últimos ejercicios de fisica. ¡Te dije que quería al menos un 9!" #speaker:EstudianteA #portrait:volverdefault #layout:left
-"Tus apuntes de Historia son del tema 5. ¡Tenemos un examen mañana y el examen es del tema 6!" #speaker:EstudianteB #portrait:volverdefault #layout:left
 "¿Qué está pasando aquí?"#speaker:Dra. Juan #portrait:dra_juan #layout:right
-"¡Mierda! Nos han pillado. Será mejor que nos largemos." #speaker:EstudianteA #portrait:volverdefault #layout:left
+"¡Mierda! Nos han pillado. Será mejor que nos largemos." #speaker:Bully #portrait:sombra #layout:left
 Está intentando contener las lágrimas. #speaker:Denis #portrait:denis #layout:left
 -> primero
 
