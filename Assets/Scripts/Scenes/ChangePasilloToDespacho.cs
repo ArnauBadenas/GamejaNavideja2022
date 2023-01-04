@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 namespace Scenes
@@ -7,7 +8,7 @@ namespace Scenes
    {
       private void OnTriggerEnter2D(Collider2D col)
       {
-         if (col.CompareTag("Player"))
+         if (col.CompareTag("Player") && Input.GetButtonDown("Interact"))
          {
             SceneManager.LoadScene("Despacho");
          }
