@@ -10,10 +10,6 @@ Está intentando contener las lágrimas. #speaker:Denis #portrait:denis #layout:
 "¿Que ha ocurrido?" #speaker:Dra. Juan #portrait:dra_juan #layout:right
 "Nada Dra. Juan, no se preocupe." #speaker:Denis #portrait:denis #layout:left
 Se seca algunas lágrimas que tiene en las mejillas con las mangas. #speaker:Dra. Juan #portrait:dra_juan #layout:right
-    * ["Puedes decírmelo, si te preocupan las consecuencias, no habrá ninguna. Estate tranquilo, tan solo busco ayudar."]
-        ~ final = final+4
-        -- Poco a poco va ganando confianza y te cuenta todo lo que ha pasado. #speaker:Denis #portrait:denis #layout:left
-        -> segundo
     * ["Estoy obligada a reportar las incidencias que veo, te pido que no me pongas más complicado mi trabajo."]
         ~ final = final+2
         -- "No puedo, seguro que me acaba perjudicando a mí." #speaker:Denis #portrait:denis #layout:left
@@ -23,9 +19,16 @@ Se seca algunas lágrimas que tiene en las mejillas con las mangas. #speaker:Dra
     * ["Mira niño si no me dices que está pasando te voy a tener que enviar a dirección."]
         -- Te mira asustado mientras le empiezan a caer las lágrimas. #speaker:Denis #portrait:denis #layout:left
         -> segundo
+    * ["Puedes decírmelo, si te preocupan las consecuencias, no habrá ninguna. Estate tranquilo, tan solo busco ayudar."]
+        ~ final = final+4
+        -- Poco a poco va ganando confianza y te cuenta todo lo que ha pasado. #speaker:Denis #portrait:denis #layout:left
+        -> segundo
 
 === segundo ===
 Debería reportar este incidente... #speaker:Dra. Juan #portrait:dra_juan #layout:right
+    * [“Vamos a dirrecion ahora mismo, este comportamiento es inadmisible.”]
+        -- Niega con la cabeza. #speaker:Denis #portrait:denis #layout:left
+        -> eventoFinal
     * [“Entiendo… Sé que quizás piensas que no es lo mejor, pero deberías reportarlo por este comportamiento, yo misma puedo acompañarte.”]
         ~ final = final+4
         -- Te mira pensativo durante unos segundos… #speaker:Denis #portrait:denis #layout:left
@@ -35,12 +38,7 @@ Debería reportar este incidente... #speaker:Dra. Juan #portrait:dra_juan #layou
         ~ final = final+2
         -- Te mira con cara de sorpresa, pero las lágrimas empiezan a frenar. #speaker:Denis #portrait:denis #layout:left
         ->  eventoFinal
-    * [“Vamos a dirrecion ahora mismo, este comportamiento es inadmisible.”]
-        -- Niega con la cabeza. #speaker:Denis #portrait:denis #layout:left
-        -> eventoFinal
 
-
-        
 == eventoFinal ==        
 {
 - final > 4:
